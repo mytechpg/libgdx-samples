@@ -1,0 +1,9 @@
+bin/
+target/
+obj/
+.get/
+gwt-unitCache/
+war/
+gen/
+
+*.class
