@@ -14,6 +14,14 @@ public class Logging extends ApplicationAdapter {
 	public void create () {
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
+		
+		Gdx.app.setLogLevel(Gdx.app.LOG_INFO);
+		Gdx.app.debug("logging", "Debug level log");
+		Gdx.app.log("logging", "Info level log");
+		Gdx.app.error("logging", "Error level log");
+		
+		Gdx.app.debug("logging", "Debug level log + exception", new Exception("debug level"));
+		Gdx.app.error("logging", "Error level log + exception", new Exception("error level"));
 	}
 
 	@Override
