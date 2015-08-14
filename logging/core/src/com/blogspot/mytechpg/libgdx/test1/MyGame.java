@@ -1,5 +1,6 @@
 package com.blogspot.mytechpg.libgdx.test1;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 
@@ -10,7 +11,7 @@ public class MyGame extends Game {
 		
 	@Override
 	public void create() {
-		Gdx.app.setLogLevel(Gdx.app.LOG_DEBUG);
+		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 		Gdx.app.debug("Game-Screen", "MyGame: create()");
 		scr = 1;
 		setScreen(scr1);

@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.blogspot.mytechpg.libgdx.test1.Logging;
 import com.blogspot.mytechpg.libgdx.test1.MyGame;
 
 public class AndroidLauncher extends AndroidApplication {

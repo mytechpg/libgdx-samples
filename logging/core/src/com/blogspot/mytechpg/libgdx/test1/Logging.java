@@ -1,7 +1,7 @@
 package com.blogspot.mytechpg.libgdx.test1;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,13 +13,13 @@ public class Logging extends ApplicationAdapter {
 	
 	@Override
 	public void create () {
-		Gdx.app.setLogLevel(Gdx.app.LOG_DEBUG);
+		Gdx.app.setLogLevel(Application.LOG_DEBUG);
 		MyGame game = new MyGame();
 		game.create();
 		batch = new SpriteBatch();
 		img = new Texture("badlogic.jpg");
 		
-		Gdx.app.setLogLevel(Gdx.app.LOG_INFO);
+		Gdx.app.setLogLevel(Application.LOG_INFO);
 		Gdx.app.debug("logging", "Debug level log");
 		Gdx.app.log("logging", "Info level log");
 		Gdx.app.error("logging", "Error level log");
