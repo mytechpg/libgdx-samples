@@ -7,8 +7,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyScreen1 implements Screen {
-	SpriteBatch batch;
-	Texture img;
+	SpriteBatch batch = null;
+	Texture img = null;
 	
 	/*
 	public MyScreen1() {
@@ -18,8 +18,10 @@ public class MyScreen1 implements Screen {
 	@Override
 	public void show() {
 		Gdx.app.debug("Game-Screen", "MyScreen1: show()");
-		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+		if (batch == null)
+			batch = new SpriteBatch();
+		if (img == null)
+			img = new Texture("badlogic.jpg");
 	}
 
 	@Override
@@ -54,6 +56,8 @@ public class MyScreen1 implements Screen {
 	@Override
 	public void dispose() {
 		Gdx.app.debug("Game-Screen", "MyScreen1: dispose()");
+		batch.dispose();
+		img.dispose();
 	}
 
 }
