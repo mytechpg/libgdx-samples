@@ -39,4 +39,12 @@ public class MyGame extends Game {
 		super.resume();
 	}
 
+	@Override
+	public void dispose() {
+		Gdx.app.debug("Game-Screen", "MyGame: dispose()");
+		scr1.dispose();
+		scr2.dispose();
+		super.dispose();
+	}
+	
 }
